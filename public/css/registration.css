@@ -1,0 +1,104 @@
+   .registration-form {
+       margin: inherit;
+       box-shadow: none;
+       border-radius: 5px;
+       padding: 20px 40px;
+       font-size: 18px;
+       background: transparent;
+   }
+
+   .registration-form .input-field {
+       width: 90%;
+   }
+
+   .registration-form .input-field:first-child {
+       padding-right: 45px;
+   }
+
+   .registration-modal .modal__container {
+       max-width: 600px;
+       max-height: 1500px;
+       height: auto;
+       background: rgba(52, 67, 94, 0.8);
+   }
+
+   .registration-modal input {
+       margin-top: 5px !important;
+   }
+
+   .registration-modal .btn {
+       margin-top: 30px;
+       margin-bottom: 30px;
+   }
+
+   .registration-modal .btn:hover {
+       color: white;
+   }
+
+   .registration-form input[type="text"],
+   .registration-form input[type="password"],
+   .registration-form input[type="email"],
+   .registration-form input[type="tel"],
+   .registration-form input[type="date"],
+   .registration-form input[type="url"],
+   .registration-form input[type="new-password"],
+   .registration-form textarea {
+       border: 1px solid #ccc;
+       background: transparent;
+       color: #fff;
+       font-size: 18px;
+       padding: 10px;
+   }
+
+   .modal-legal a {
+       color: #eae151;
+   }
+
+   .registration-modal #reg-form-status {
+       text-align: center;
+       color: #fff;
+       font-size: 22px;
+   }
+
+   @media only screen and (max-width:768px) {
+       .registration-form {
+           padding: 10px;
+       }
+
+       .registration-form label {
+           font-size: 10px !important;
+       }
+
+       .registration-form input {
+           font-size: 10px !important;
+           padding: 5px !important;
+           margin-top: 0 !important;
+           margin-bottom: 0 !important;
+       }
+
+       .registration-form .input-field {
+           width: 100% !important;
+       }
+
+       .registration-modal .btn {
+           padding: 13px 90px;
+           margin-top: 0;
+       }
+   }
+
+   .registration-form .modal-legal input {
+       width: initial !important;
+   }
+
+   .registration-form .input-field {
+       width: 100%;
+       display: inline-grid;
+   }
+
+   .registration-form .input-field:first-child {
+       padding-right: 0;
+   }
+
+   .registration-form fieldset {
+       display: inherit;
+   }

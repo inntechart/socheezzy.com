@@ -1,0 +1,183 @@
+.cn-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.cn-container {
+    background-color: #41455b;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-sizing: border-box;
+    z-index: 2;
+    text-shadow: 1px 1px 2px #17160d;
+}
+
+.cn-container a {
+    color: whitesmoke;
+}
+
+.cn-header {
+    position: absolute;
+    right: 0;
+}
+
+.cn-close {
+    background: transparent;
+    border: 0;
+    padding-right: 15px;
+}
+
+.cn-header .cn-close:before {
+    content: "\2715";
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.cn-header .cn-close:hover {
+    cursor: pointer;
+}
+
+.cn-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+}
+
+.cn-content h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cn-content p {
+    text-align: center;
+    padding: 12px 10px;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes mmslideIn {
+    from {
+        transform: translateY(15%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mmslideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10%);
+    }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .cn-overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .cn-container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .cn-overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .cn-container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .cn-container,
+.micromodal-slide .cn-overlay {
+    will-change: transform;
+}
+
+.cookie-button {
+    width: 250px;
+    height: 60px;
+    background: linear-gradient(to bottom, #4eb5e5 0%, #389ed5 100%);
+    /* W3C */
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid #2b8bc6;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-family: 'Open Sans',
+        sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    font-size: 15px;
+    text-align: center;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    line-height: 60px;
+    /* Just for presentation */
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.cookie-button:active {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .2);
+    top: 1px;
+}
+
+.cookie-button:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 30px solid #187dbc;
+    border-bottom: 33px solid #187dbc;
+    border-left: 26px solid transparent;
+    border-right: 32px solid #187dbc;
+    position: absolute;
+    opacity: 0.6;
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;
+}
