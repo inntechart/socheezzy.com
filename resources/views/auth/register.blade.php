@@ -41,7 +41,7 @@
                         <input placeholder="Confirm Password" type="password" tabindex="3" name="password_confirmation"
                                required autocomplete="new-password">
                     </fieldset>
-                    <button name="submit" type="submit" id="contact-submit" class="btn" data-submit="Register">
+                    <button name="submit" type="submit" id="contact-submit" data-submit="Register">
                         Register
                     </button>
                 </form>
